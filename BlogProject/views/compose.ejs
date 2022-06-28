@@ -1,0 +1,18 @@
+<%- include("partials/header") %>
+
+    <div class="jumbotron">
+        <h1 class="text-center">Compose</h1>
+        <br>
+        <hr>
+    </div>
+    <div class="jumbotron">
+
+        <form class="form-group" action="/compose" method="post">
+            <label>Title : </label><br>
+            <input type="text" class="form-control" name="TitleComposer" placeholder="Add Title" required><br>
+            <label>Text:</label><br>
+            <textarea name="textComposer" cols="88" rows="7" placeholder="Add Text"></textarea><br><br>
+            <button type="submit" class="btn btn-lg btn-success" name="button">Publish</button><br>
+        </form>
+
+    </div>

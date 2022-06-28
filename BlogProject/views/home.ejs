@@ -1,0 +1,46 @@
+<%- include("partials/header") %>
+
+  <div class="container-fluid">
+    <h1 class="text-center">Home</h1>
+    <p class="text-center"><%= HomeStart %></p>
+  </div>
+  <hr>
+  <div class="container">
+  
+    <p><% posts %></p>
+   
+     <% posts.forEach(function(post) { %>
+      <div class="jumbotron">
+        <h3 class="text-center"><%= post.title %></h3>
+        <p class="text-center"><%=  post.text.substring(0,100)+"..." %> 
+          <span>
+            <a href="/posts/<%=post.title%>">Leggi di piu..</a>
+          </span>
+        </p>
+        <span><%= date +" "+ hours %></span> 
+      </div>
+    <% }); %>
+  
+</div>
+
+<div class=" jumbotron">
+            <h3 class="text-center">Post-1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Eius possimus omnis, aut expedita quidem sequi doloremque! Aut rerum neque eveniet, consequatur, minima
+              odio voluptatem non voluptatibus quasi vitae eos molestias.
+            </p>
+            <span>28/06/22</span>
+      </div>
+
+      <div class="jumbotron">
+        <h3 class="text-center">Post-2</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Eius possimus omnis, aut expedita quidem sequi doloremque! Aut rerum neque eveniet, consequatur, minima odio
+          voluptatem non voluptatibus quasi vitae eos molestias.
+        </p>
+        <span>4/07/22</span>
+      </div>
+
+      <%- include("partials/footer") %>
